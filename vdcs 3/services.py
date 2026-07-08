@@ -11,6 +11,6 @@ def update_shipment_service(db: Session, shipment_id, shipment_update):
     shipment.receiver_name = shipment_update.receiver_name
     shipment.delivery_address = shipment_update.delivery_address
 
-    db.commit(shipment)
+    db.commit()
     db.refresh(shipment)
     return shipment
